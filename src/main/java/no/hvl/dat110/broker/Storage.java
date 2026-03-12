@@ -80,8 +80,9 @@ public class Storage {
 
 	public void addSubscriber(String user, String topic) {
 
-		getSubscribers(topic).add(user);
-		
+		if(subscriptions.containsKey(topic)) {
+			getSubscribers(topic).add(user);
+		}
 		
 	}
 
